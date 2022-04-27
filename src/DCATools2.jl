@@ -8,6 +8,7 @@ export PottsGraph
 export rand_pottsgraph
 
 include("objects.jl")
+include("utils.jl")
 include("sample.jl")
 
 end # module
