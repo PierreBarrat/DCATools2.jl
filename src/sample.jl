@@ -38,6 +38,22 @@ function mcmc_sweep!(conf, g, rng = Random.GLOBAL_RNG)
 	return nothing
 end
 
+"""
+	sample(
+		g, M; 
+		init = rand(1:size(g)[1], size(g)[2]), 
+		Twait = 1, 
+		burnin = 5*Twait, 
+		rng = Random.GLOBAL_RNG
+	)
+
+Sample `M` configurations from `g` using MCMC. 
+
+## Kwargs
+- `init`: initial configuration
+- `Twait`: number of sweeps between two sample, *i.e.* decorrelation time of samples
+- `burnin`: number of sweeps between initial configuration and first sample
+"""
 function sample(
 	g, M; 
 	init = rand(1:size(g)[1], size(g)[2]), 

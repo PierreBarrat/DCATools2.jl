@@ -29,6 +29,12 @@ function rand_pottsgraph(L, q; rJ = randn, rh = randn)
 	return g
 end
 
+"""
+	matrix_representation(g::PottsGraph)
+
+Return the matrix/vector representation of the parameters of `g`: couplings are represented
+by a `(L*q) x (L*q)` matrix and fields by a `L*q` vector.
+"""
 function matrix_representation(g::PottsGraph)
 	q, L = size(g)
 	J = zeros(Float64, L*q, L*q)
