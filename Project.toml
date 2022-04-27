@@ -1,0 +1,7 @@
+name = "DCATools2"
+uuid = "923586e0-eacc-4b70-9d2e-867e5aea1314"
+authors = ["pierrebarrat <p.barrat@live.fr>"]
+version = "0.1.0"
+
+[deps]
+Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
